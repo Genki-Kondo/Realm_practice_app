@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Realm_practice_appApp: App {
+    @StateObject private var memoVM = MemoViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(memoVM) 
         }
     }
 }
